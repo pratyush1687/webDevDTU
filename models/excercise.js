@@ -5,4 +5,4 @@ var excerciseSchema = new mongoose.Schema({
     description:String,
 })
 
-module.exports = mongoose.model('exercise',)
+module.exports = mongoose.model('excercise',excerciseSchema);

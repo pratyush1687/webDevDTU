@@ -16,7 +16,7 @@ var userSchema = new mongoose.Schema({
     imgUrl:String,
     trainerAlloted:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Trainer'
+        ref: 'trainer'
     },
     workoutSchedule:[
         {

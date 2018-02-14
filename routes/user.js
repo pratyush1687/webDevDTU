@@ -3,16 +3,23 @@ const passport = require('passport');
 const UserModel = require('../models/user');
 
 router.get('/',(req,res)=>{
-    UserModel.find({},(err,data)=>{
+    UserModel.find({}).populate('trainerAlloted').exec((err,data)=>{
         if(err){
             throw err
         }
         else{
             // console.log(data);
+            // data[0].populate('trainer').exec(function(err,user){
             res.send(data);
+
+            // });
             
         }
     })
+})
+
+router.get('/showUsers',function(req,res){
+    res.redirect('../user.html')
 })
 
 router.post('/addUser',(req,res)=>{
