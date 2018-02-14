@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workout App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="ui secondary fixed pointing menu" style="padding-left: 280px;">
+        <a class="active item">
+            Workout App
+        </a>
+
+        <div class="right menu">
+            <a class="active ui item">
+                Edit Profile
+            </a>
+            <a class="ui item">
+                <i class="power red icon"></i>
+                Logout
+            </a>
+        </div>
+    </div>
+    <nav>
+        <div class="ui left demo vertical sidebar labeled icon menu visible" style="width: 250px;">
+
+            <a class="item" style="padding: 0px;">
+                <img style="width: 100%; height: 110px;" class="ui tiny image" src="image/motivation.png">
+
+            </a>
+            <a class="active item" href="#portfolio">
+                <div class="item">
+                    <img class="ui avatar image" src="image/matthew.png"> Matthew(Trainer)
+
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="object group blue icon"></i> Dashboard
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="users red icon"></i> Unassigned Users
+                </div>
+            </a>
+
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="phone green icon"></i> Calls
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="wechat yellow icon"></i> Chat
+                </div>
+            </a>
+        </div>
+
+    </nav>
+
+    <section>
+        <!-- news feed starts -->
+        <div class="ui four grid centered center" id="portfolio" style="margin-top: 50px; margin-left: 220px;">
+            <h1 style="font-family: 'Raleway', sans-serif !important; font-size: 35px; font-weight: 100; letter-spacing: 0.2em;">Edit Profile</h1>
+            <div class="row">
+                <div class="eight wide column">
+                    <div class="ui cards">
+                        <div class="ui fluid card">
+                            <div class="content">
+                                <img class="right floated tiny circular ui image" src="image/elliot.jpg">
+                                <div class="header">
+                                    Elliot Fu
+                                </div>
+                                <div class="meta">
+                                    Head Coach
+                                </div>
+
+                                <div class="description">
+                                    <div class="ui divider"></div>
+                                    <form class="ui form">
+                                        <div class="field">
+                                            <label>Name</label>
+                                            <input type="text" name="name" value="name" disabled>
+                                        </div>
+                                        <div class="field">
+                                            <label>Phone Number</label>
+                                            <input type="text" name="phone-number" value="9999999999">
+                                        </div>
+                                        <div class="field">
+                                            <label>Address</label>
+                                            <input type="text" name="address" value="Nsit,Dwarka">
+                                        </div>
+                                        <div class="ui divider"></div>
+                                        <h3>Change Password</h3>
+                                        <div class="field">
+                                            <label>Previous Password</label>
+                                            <input type="password" name="prevPassword" placeholder="Enter previous password">
+                                        </div>
+                                        <div class="field">
+                                            <label>New Password</label>
+                                            <input type="password" name="newPassword" placeholder="Enter New password">
+                                        </div>
+                                        <div class="ui divider"></div>
+                                        <div class="field">
+                                            <label>Years of Experience</label>
+                                            <input type="number" name="experience" value="3">
+                                        </div>
+
+                                        <button class="ui green button" type="submit">Edit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- news feed ends -->
+
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script>
+        $("#dropdown-btn").on('click', function () {
+            $('.ui.dropdown')
+                .dropdown()
+                ;
+        });
+
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+    </script>
+
+
+</body>
+
+</html>
