@@ -10,7 +10,7 @@ var trainerSchema = new mongoose.Schema({
     type:{type:String,default:'trainer'},
     experience: String,
     phoneNumber: String,
-    address:String,
+    address: String,
     usersAlloted: [
         {
             type: mongoose.Schema.Types.ObjectId,
