@@ -20,29 +20,29 @@ app.use(express.static('public'))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(methodOverride("_method"));
-app.use(flash());
+// app.use(methodOverride("_method"));
+// app.use(flash());
 
 
 
-app.use(require('express-session')({
-    secret: 'dtu hackathon',
-    resave: false,
-    saveUninitialized: false
-}));
+// app.use(require('express-session')({
+//     secret: 'dtu hackathon',
+//     resave: false,
+//     saveUninitialized: false
+// }));
 
-app.use(function(req, res, next){
-    res.locals.currentUser = req.user;
-    res.locals.error = req.flash('error');
-    res.locals.success = req.flash('success');
-    next();
-});
+// app.use(function(req, res, next){
+//     res.locals.currentUser = req.user;
+//     res.locals.error = req.flash('error');
+//     res.locals.success = req.flash('success');
+//     next();
+// });
 
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(UserModel.authenticate()));
-passport.serializeUser(UserModel.serializeUser());
-passport.deserializeUser(UserModel.deserializeUser());
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new LocalStrategy(UserModel.authenticate()));
+// passport.serializeUser(UserModel.serializeUser());
+// passport.deserializeUser(UserModel.deserializeUser());
 
 
 app.use('/trainer',train);
