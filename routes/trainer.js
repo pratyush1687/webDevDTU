@@ -25,6 +25,9 @@ router.post('/addTrainer',(req,res)=>{
     });  
 
 })
+router.get('/updateTrainer',(req,res)=>{
+    res.redirect('../edit.html')
+})
 
 router.post('/updateTrainer',(req,res)=>{
     updatedDetails = req.body;

@@ -87,7 +87,10 @@
 
                                 <div class="description">
                                     <div class="ui divider"></div>
-                                    <form class="ui form">
+                                    <form class="ui form" action = 'trainer/updateTrainer' method="POST">
+                                        <div class="field">
+                                            <input type="hidden" name='id' value=''>
+                                        </div>
                                         <div class="field">
                                             <label>Name</label>
                                             <input type="text" name="name" value="name" disabled>
@@ -101,7 +104,7 @@
                                             <input type="text" name="address" value="Nsit,Dwarka">
                                         </div>
                                         <div class="ui divider"></div>
-                                        <h3>Change Password</h3>
+                                        <!-- <h3>Change Password</h3>
                                         <div class="field">
                                             <label>Previous Password</label>
                                             <input type="password" name="prevPassword" placeholder="Enter previous password">
@@ -109,7 +112,7 @@
                                         <div class="field">
                                             <label>New Password</label>
                                             <input type="password" name="newPassword" placeholder="Enter New password">
-                                        </div>
+                                        </div> -->
                                         <div class="ui divider"></div>
                                         <div class="field">
                                             <label>Years of Experience</label>
@@ -142,8 +145,12 @@
             on: 'hover'
         });
     </script>
+    <script>
+    $(function(){
+        $.get('')
+    })
+    </script>
 
 
 </body>
-
 </html>
