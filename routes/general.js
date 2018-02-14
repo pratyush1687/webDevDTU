@@ -41,4 +41,48 @@ router.post('/allot',(req,res)=>{
     })
 })
 
-module.exports = router
+
+router.post('/assigneRoutine',(req,res)=>{
+    userId = req.body.userId;
+    workoutId = req.body.workoutId;
+    workoutTime = req.body.time;
+    User.findById(userId,(err,data)=>{
+        data.workoutSchedule.push({time:workoutTime,workout:workoutId});
+        data.save();
+    })
+})
+
+router.post('/scheduleCall',(req,res)=>{
+    // console.log(req.body);
+    Trainer.findById(req.body.trainId,(err,foundTrainer)=>{
+        if(err){throw err}
+        // console.log(foundTrainer);
+        
+        User.findById(req.body.userId,(err,foundUser)=>{
+            if(err){throw err;}
+            // console.log(foundUser);
+            if(foundUser.trainerAlloted==foundTrainer.id){
+                foundUser.ScheduledCalls.push({
+                    dateTime:req.body.time,
+                    trainer:foundTrainer.id
+                })
+                foundTrainer.ScheduledCalls.push({
+                    dateTime:req.body.time,
+                    user:foundUser.id,
+                })
+                foundTrainer.save((err,data)=>{
+                    if(err) throw err;
+                    foundUser.save((err,data)=>{
+                        if(err) throw err;
+                        res.send('call has been scheduled')
+                    })
+                })
+            }
+            else{
+                res.send('this trainer is not alloted to given user');
+            }
+        })
+    })
+})
+
+module.exports = router;

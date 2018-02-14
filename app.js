@@ -8,10 +8,19 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const port = process.env.PORT||5000;
 const app = express();
+
+
+
+
+// route imports
 const train = require('./routes/trainer');
-const user = require('./routes/user')
-const general = require('./routes/general')
-const UserModel = require('./models/user')
+const user = require('./routes/user');
+const general = require('./routes/general');
+const workout = require('./routes/workout')
+
+
+// model imports
+const UserModel = require('./models/user');
 //mongo connect
 mongoose.connect('mongodb://new:password@ds023448.mlab.com:23448/webdevpratyush')
 
@@ -48,6 +57,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/trainer',train);
 app.use('/user',user);
 app.use('/general',general);
+app.use('/workout',workout)
 
 app.listen(port,()=>{
     console.log(`listening on ${port}`);
