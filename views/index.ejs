@@ -66,22 +66,28 @@
 
                 <div id="loginform">
                     <h1>LOGIN</h1>
-                    <input type="email" placeholder="Email" />
+                    <form action="/user/login" method="post">
+                    
+                    <input id = "usernameInput" name= 'username' type="text" placeholder="Email" />
                     <br>
-                    <input type="password" placeholder="Password" />
+                    <input id = "passwordInput" name = "password" type="password" placeholder="Password" />
                     <br>
-                    <button>LOGIN</button>
+                    <button id = "loginBtn" type ='submit'>LOGIN</button>
+                        </form>
+                    
                 </div>
 
                 <div id="signupform">
+                    <form action="/user/signup" method="post">
                     <h1>SIGN UP</h1>
-                    <input type="text" placeholder="Full Name" />
+                    <input name="name" type="text" placeholder="Full Name" />
                     <br>
-                    <input type="email" placeholder="Email" />
+                    <input name="email" type="email" placeholder="Email" />
                     <br>
-                    <input type="password" placeholder="Password" />
+                    <input name="password" type="password" placeholder="Password" />
                     <br>
-                    <button>SIGN UP</button>
+                    <button type="submit">SIGN UP</button>
+                    </form>
                 </div>
 
                 <div id="login_msg">Have an account?</div>
@@ -110,11 +116,14 @@
 
                 <div id="loginform">
                     <h1>LOGIN</h1>
-                    <input type="email" placeholder="Email" />
+                    <!-- <form action="trainer/login"> -->
+                    <input id = 'trainerUsername' type="text" placeholder="Email" />
                     <br>
-                    <input type="password" placeholder="Password" />
+                    <input id='trainerPassword' type="password" placeholder="Password" />
                     <br>
-                    <button>LOGIN</button>
+                    <button id='loginTrainer' type='submit'>LOGIN</button>
+                <!-- </form> -->
+                    
                 </div>
 
                 <div id="signupform">
@@ -164,6 +173,9 @@
                 $("#loginform").css("visibility", "visible");
             });
         });
+    </script>
+    <script>
+        
     </script>
 </body>
 

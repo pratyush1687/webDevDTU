@@ -10,8 +10,6 @@ const port = process.env.PORT||5000;
 const app = express();
 
 
-
-
 // route imports
 const train = require('./routes/trainer');
 const user = require('./routes/user');
@@ -29,35 +27,39 @@ app.use(express.static('public'))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-// app.use(methodOverride("_method"));
-// app.use(flash());
+app.use(methodOverride("_method"));
+app.use(flash());
 
+app.use('view engine', 'ejs');
 
+app.use(require('express-session')({
+    secret: 'dtu hackathon',
+    resave: false,
+    saveUninitialized: false
+}));
 
-// app.use(require('express-session')({
-//     secret: 'dtu hackathon',
-//     resave: false,
-//     saveUninitialized: false
-// }));
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    res.locals.error = req.flash('error');
+    res.locals.success = req.flash('success');
+    next();
+});
 
-// app.use(function(req, res, next){
-//     res.locals.currentUser = req.user;
-//     res.locals.error = req.flash('error');
-//     res.locals.success = req.flash('success');
-//     next();
-// });
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-// passport.use(new LocalStrategy(UserModel.authenticate()));
-// passport.serializeUser(UserModel.serializeUser());
-// passport.deserializeUser(UserModel.deserializeUser());
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(UserModel.authenticate()));
+passport.serializeUser(UserModel.serializeUser());
+passport.deserializeUser(UserModel.deserializeUser());
 
 
 app.use('/trainer',train);
 app.use('/user',user);
 app.use('/general',general);
-app.use('/workout',workout)
+app.use('/workout',workout);
+
+app.get('/', function(req, res){
+    res.render('index');
+});
 
 app.listen(port,()=>{
     console.log(`listening on ${port}`);

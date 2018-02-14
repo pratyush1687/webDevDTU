@@ -42,6 +42,11 @@ router.post('/updateUser',(req,res)=>{
         // console.log(FoundUser);
         res.send({message:'updated',user:FoundUser});
     })
-})
+});
+
+router.post('/signup', function(req, res){
+    console.log(req.body);
+    
+});
 
 module.exports = router;
