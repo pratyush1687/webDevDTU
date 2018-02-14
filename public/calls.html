@@ -32,23 +32,22 @@
     </div>
     <nav>
         <div class="ui left demo vertical sidebar labeled icon menu visible" style="width: 250px;">
-
             <a class="item" style="padding: 0px;">
                 <img style="width: 100%; height: 110px;" class="ui tiny image" src="image/motivation.png">
 
             </a>
-            <a class="active item" >
+            <a class="active item" href="#portfolio">
                 <div class="item">
                     <img class="ui avatar image" src="image/matthew.png"> Matthew(Trainer)
 
                 </div>
             </a>
-            <a class="item">
+            <a class="item" href="#portfolio">
                 <div class="item">
                     <i style="display: inline; float: left;" class="object group blue icon"></i> Dashboard
                 </div>
             </a>
-            <a class="item" >
+            <a class="item" href="#portfolio">
                 <div class="item">
                     <i style="display: inline; float: left;" class="users red icon"></i> Unassigned Users
                 </div>
@@ -58,18 +57,16 @@
                         <i style="display: inline; float: left;" class="users orange icon"></i> Assigned Users
                     </div>
                 </a>
-            <a class="item">
+            <a class="item" href="#portfolio">
                 <div class="item">
                     <i style="display: inline; float: left;" class="phone green icon"></i> Calls
                 </div>
             </a>
-            <a class="item">
+            <a class="item" href="#portfolio">
                 <div class="item">
                     <i style="display: inline; float: left;" class="wechat yellow icon"></i> Chat
                 </div>
             </a>
-            
-
         </div>
 
     </nav>
@@ -77,7 +74,7 @@
     <section>
         <!-- news feed starts -->
         <div class="ui four grid centered center" id="portfolio" style="margin-top: 50px; margin-left: 220px;">
-            <h1 style="font-family: 'Raleway', sans-serif !important; font-size: 35px; font-weight: 100; letter-spacing: 0.2em;">Contract Expiry</h1>
+            <h1 style="font-family: 'Raleway', sans-serif !important; font-size: 35px; font-weight: 100; letter-spacing: 0.2em;">Edit Profile</h1>
             <div class="row">
                 <div class="eight wide column">
                     <div class="ui cards">
@@ -92,35 +89,40 @@
                                 </div>
 
                                 <div class="description">
-                                    <p>
-                                        <strong>Job experience</strong>: 15 years
-                                        <br>
-                                        <strong>Phone Number</strong>: 9999999999
-                                        <br>
-                                        <strong>Email</strong>: hello
-                                        <br>
-                                    </p>
                                     <div class="ui divider"></div>
-                                    <p>
-                                        <strong>Job description</strong>: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Fugit porro eligendi esse maxime consectetur reiciendis veniam est atque, obcaecati
-                                        vitae velit incidunt tempora sunt praesentium sed exercitationem, quaerat, qui earum.
+                                    <form class="ui form">
+                                        <div class="field">
+                                            <label>Name</label>
+                                            <input type="text" name="name" value="name" disabled>
+                                        </div>
+                                        <div class="field">
+                                            <label>Phone Number</label>
+                                            <input type="text" name="phone-number" value="9999999999">
+                                        </div>
+                                        <div class="field">
+                                            <label>Address</label>
+                                            <input type="text" name="address" value="Nsit,Dwarka">
+                                        </div>
+                                        <div class="ui divider"></div>
+                                        <h3>Change Password</h3>
+                                        <div class="field">
+                                            <label>Previous Password</label>
+                                            <input type="password" name="prevPassword" placeholder="Enter previous password">
+                                        </div>
+                                        <div class="field">
+                                            <label>New Password</label>
+                                            <input type="password" name="newPassword" placeholder="Enter New password">
+                                        </div>
+                                        <div class="ui divider"></div>
+                                        <div class="field">
+                                            <label>Years of Experience</label>
+                                            <input type="number" name="experience" value="3">
+                                        </div>
 
-                                    </p>
-                                    <div class="ui divider"></div>
-                                    <p>
-                                        <strong>Contract Details</strong>
-                                        <br>
-                                        <strong>Date of Joining</strong>: 14/2/2018
-                                        <br>
-                                        <strong>Contract Duration</strong>: 1 year
-                                        <br>
-                                        <strong>Days Left</strong>: 32 days
-                                        <br>
-                                    </p>
+                                        <button class="ui green button" type="submit">Edit</button>
+                                    </form>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
