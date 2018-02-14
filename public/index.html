@@ -66,11 +66,15 @@
 
                 <div id="loginform">
                     <h1>LOGIN</h1>
-                    <input type="email" placeholder="Email" />
+                    <!-- <form action="/trainer/login"> -->
+                    
+                    <input id = "usernameInput" name= 'username' type="text" placeholder="Email" />
                     <br>
-                    <input type="password" placeholder="Password" />
+                    <input id = "passwordInput" name = "password" type="password" placeholder="Password" />
                     <br>
-                    <button>LOGIN</button>
+                    <button id = "loginBtn" type ='submit'>LOGIN</button>
+               
+                    
                 </div>
 
                 <div id="signupform">
@@ -110,11 +114,14 @@
 
                 <div id="loginform">
                     <h1>LOGIN</h1>
-                    <input type="email" placeholder="Email" />
+                    <!-- <form action="trainer/login"> -->
+                    <input id = 'trainerUsername' type="text" placeholder="Email" />
                     <br>
-                    <input type="password" placeholder="Password" />
+                    <input id='trainerPassword' type="password" placeholder="Password" />
                     <br>
-                    <button>LOGIN</button>
+                    <button id='loginTrainer' type='submit'>LOGIN</button>
+                <!-- </form> -->
+                    
                 </div>
 
                 <div id="signupform">
@@ -164,6 +171,19 @@
                 $("#loginform").css("visibility", "visible");
             });
         });
+    </script>
+    <script>
+        btn = $('#loginBtn');   
+        inp1 = $('#passwordInput');
+        inp2 = $('#usernameInput');
+        btn.click(function(){
+            console.log('hi');
+            
+            $.post('/trainer/login',{username:inp2.val(),password:inp1.val()},(data)=>{
+                console.log(data);
+                localStorage.setItem('jwtToken',data);
+            })
+        })
     </script>
 </body>
 
