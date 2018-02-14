@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dowmat - Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="ui secondary fixed pointing menu" style="padding-left: 280px;">
+        <a class="active item">
+            Workout App
+        </a>
+
+        <div class="right menu">
+            <a class="ui item">
+                Edit Profile
+            </a>
+            <a class="ui item">
+                <i class="power red icon"></i>
+                Logout
+            </a>
+        </div>
+    </div>
+    <nav>
+        <div class="ui left demo vertical sidebar labeled icon menu visible" style="width: 250px;">
+
+            <a class="item" style="padding: 0px;">
+                <img style="width: 100%; height: 110px;" class="ui tiny image" src="image/motivation.png">
+
+            </a>
+            <a class="active item" href="#portfolio">
+                <div class="item">
+                    <img class="ui avatar image" src="image/matthew.png"> Matthew(Trainer)
+
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="object group blue icon"></i> Dashboard
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="phone green icon"></i> Calls
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="wechat yellow icon"></i> Chat
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="calendar brown icon"></i> Expiry
+                </div>
+            </a>
+            <a class="item" href="#portfolio">
+                <div class="item">
+                    <i style="display: inline; float: left;" class="area chart teal icon"></i> Timeline
+                </div>
+            </a>
+        </div>
+
+    </nav>
+
+    <section>
+        <!-- news feed starts -->
+        <div class="ui four grid centered center" id="portfolio" style="margin-top: 50px; margin-left: 220px;">
+            <h1 style="font-family: 'Raleway', sans-serif !important; font-size: 35px; font-weight: 100; letter-spacing: 0.5em;">Dashboard</h1>
+            <div class="row">
+                <div class="four wide column">
+                    <div class="ui special cards">
+                        <div class="ui fluid card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <div class="ui inverted button">Add Friend</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="image/elliot.jpg">
+                            </div>
+                            <div class="content">
+                                <a class="header">Team Fu</a>
+                                <div class="meta">
+                                    <span class="date">Create in Sep 2014</span>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <a>
+                                    <i class="users icon"></i>
+                                    2 Members
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                        <div class="ui special cards">
+                            <div class="ui fluid card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <div class="ui inverted button">Add Friend</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="image/elliot.jpg">
+                                </div>
+                                <div class="content">
+                                    <a class="header">Team Fu</a>
+                                    <div class="meta">
+                                        <span class="date">Create in Sep 2014</span>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <a>
+                                        <i class="users icon"></i>
+                                        2 Members
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <!-- news feed ends -->
+
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script>
+        $("#dropdown-btn").on('click', function () {
+            $('.ui.dropdown')
+                .dropdown()
+                ;
+        });
+    </script>
+
+
+</body>
+
+</html>
